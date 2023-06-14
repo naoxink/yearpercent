@@ -29,7 +29,7 @@
         const lastDayThisYear = new Date(today.getFullYear(), 11, 31, 23, 59, 59)
         const diffTimeFullYear = Math.abs(firstDayThisYear - lastDayThisYear)
         const diffDaysFullYear = Math.floor(diffTimeFullYear)
-        document.querySelector('#percent').innerHTML = (diffDays * 100 / diffDaysFullYear) + '%'
+        document.querySelector('#percent').innerHTML = (diffDays * 100 / diffDaysFullYear).toFixed(14) + '%'
         requestAnimationFrame(calc)
       }
       calc()
